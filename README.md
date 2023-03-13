@@ -18,6 +18,9 @@ assertSee()         = check on rendered page if see/contain some given value
 assertViewIs()      = check if rendered view is some view from given value
 assertStatus()      = check if response status is equal to given value 
 
+#Run the Test
+run the test by calling : php artisan test
+
 #notes 
 ##Gamma Testing
 Setelah lolos Alpha & Beta Testing, keamanan dan fungsi, perbaikan hanya bug Critical, selebihnya di perbaiki setelah aplikasi Release
