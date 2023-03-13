@@ -3,12 +3,18 @@
 namespace Tests\Feature;
 
 use App\Http\Controllers\BismillahController;
+use App\Models\BismillahModel;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class BismillahTest extends TestCase
 {
+    use DatabaseTransactions; //revert / rollback table setelah menjalani test ke kondisi sblm menjalani test
+    //use DatabaseMigrations; //drop all table setelah menjalani test
+
     /**
      * A basic feature test example.
      */
@@ -36,5 +42,12 @@ class BismillahTest extends TestCase
     public function test_add_negative_function(){
         $result = BismillahController::add(10,5);
         $this->assertNotEquals(10, $result);
+    }
+
+    //Unit Test interaksi dengan Model / Database
+    public function test_add_data_to_table(){
+        BismillahController::insertNewData();
+        $result = BismillahModel::get();
+        $this->assertCount(2, $result);
     }
 }
