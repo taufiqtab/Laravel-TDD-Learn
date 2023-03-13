@@ -30,7 +30,10 @@ test smaller function, smaller -> better ;)
 - assertStatus()      = check if response status is equal to given value 
 
 ## Run the Test
-run the test by calling : php artisan test
+run the test by calling : 
+```
+php artisan test
+```
 
 ## notes 
 ### Gamma Testing
