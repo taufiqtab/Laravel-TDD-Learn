@@ -47,6 +47,13 @@ php artisan test tests/Feature/BismillahTest.php
 - assertViewIs()      = check if rendered view is some view from given value
 - assertStatus()      = check if response status is equal to given value 
 
+### FYI
+The first thing you need to keep in mind when starting a project using TDD is that you have to write the test code before the actual functionality that you need to implement.
+
+This is easier said than done, right? How do you test something when it doesn’t even exist yet? This is where “coding by wishful thinking” comes in. The idea is to write test code as if the actual code you are testing already exists. Therefore, you’re basically just interacting with it as if it’s already there. Afterward, you run the test. Of course, it will fail, so you need to use the error message to guide you on what needs to be done next. Just write the simplest implementation to solve the specific error returned by the test and then run the test again. Repeat this step over until the test passes.
+
+It’s going to feel a bit weird when you’re just starting out, but you’ll get used to it after writing a few dozen tests and going through the whole cycle.
+
 ## notes 
 ### Gamma Testing
 Setelah lolos Alpha & Beta Testing, keamanan dan fungsi, perbaikan hanya bug Critical, selebihnya di perbaiki setelah aplikasi Release
@@ -61,6 +68,7 @@ melakukan uji coba pada dua hal berbeda di dalam dua kelompok. Sehingga, Anda bi
 - https://www.kawankoding.id/belajar-tdd-laravel-menulis-test-pertama/
 - https://blog.enggartivandi.com/tutorial-laravel-testing-unit-test/
 - https://accurate.id/marketing-manajemen/unit-testing/
+- https://www.honeybadger.io/blog/laravel-tdd/
 
 # Example Code 
 ```
