@@ -41,3 +41,7 @@ ketika menjelang akhir development, tidak menggunakan unit test / functional tes
 
 ## A/B Testing
 melakukan uji coba pada dua hal berbeda di dalam dua kelompok. Sehingga, Anda bisa melihat strategi apa yang sebenarnya lebih disukai oleh para pelanggan
+
+### Referensi : 
+- https://www.kawankoding.id/belajar-tdd-laravel-menulis-test-pertama/
+- https://blog.enggartivandi.com/tutorial-laravel-testing-unit-test/
