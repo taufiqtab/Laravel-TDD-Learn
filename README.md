@@ -33,7 +33,7 @@ test smaller function, smaller -> better ;)
 run the test by calling : php artisan test
 
 # notes 
-##Gamma Testing
+## Gamma Testing
 Setelah lolos Alpha & Beta Testing, keamanan dan fungsi, perbaikan hanya bug Critical, selebihnya di perbaiki setelah aplikasi Release
 
 ## Aplha Testing
