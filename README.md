@@ -45,3 +45,4 @@ melakukan uji coba pada dua hal berbeda di dalam dua kelompok. Sehingga, Anda bi
 ### Referensi : 
 - https://www.kawankoding.id/belajar-tdd-laravel-menulis-test-pertama/
 - https://blog.enggartivandi.com/tutorial-laravel-testing-unit-test/
+- https://accurate.id/marketing-manajemen/unit-testing/
