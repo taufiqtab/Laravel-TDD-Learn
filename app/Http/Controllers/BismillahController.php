@@ -12,6 +12,6 @@ class BismillahController extends Controller
     }
 
     public static function insertNewData(){
-        BismillahModel::insert(['data' => 'some datas']);
+        BismillahModel::insert(['data' => 'some datas blablabla']);
     }
 }

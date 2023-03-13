@@ -22,7 +22,7 @@ class BismillahTest extends TestCase
     {
         $response = $this->get('/articles');
         $response->assertStatus(200);
-        $response->assertSee('Judul Blog');
+        $response->assertSee('Judul Blog pak zaky');
         $response->assertViewIs('articles.index');
     }
 
@@ -48,6 +48,6 @@ class BismillahTest extends TestCase
     public function test_add_data_to_table(){
         BismillahController::insertNewData();
         $result = BismillahModel::get();
-        $this->assertCount(2, $result);
+        $this->assertCount(3, $result);
     }
 }
