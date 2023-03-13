@@ -30,6 +30,10 @@ run the test by calling :
 ```
 php artisan test
 ```
+run spesific test unit class : 
+```
+php artisan test tests/Feature/BismillahTest.php
+```
 
 ## Standart Assert Function
 - assertTrue()        = check if result true (bool)

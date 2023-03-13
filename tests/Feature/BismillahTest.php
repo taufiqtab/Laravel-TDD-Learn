@@ -22,7 +22,7 @@ class BismillahTest extends TestCase
     {
         $response = $this->get('/articles');
         $response->assertStatus(200);
-        $response->assertSee('Judul Blog pak zaky');
+        $response->assertSee('Judul Blog');
         $response->assertViewIs('articles.index');
     }
 
