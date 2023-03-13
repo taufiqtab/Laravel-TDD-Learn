@@ -1,4 +1,15 @@
 #TEST DRIVEN DEVELOPMENT - Laravel
+Test Driven Development adalah sebuah metode pengembangan perangkat lunak yang dikendalikan oleh pengujian atau test.
+Jadi, lebih mudahnya adalah kita diwajibkan menulis kode untuk testing terlebih dulu sebelum menulis kode untuk aplikasi. Kurang lebih alur kerjanya seperti ini :
+
+- Menulis skrip pengujian / test, usahakan menulikan semua kemungkinan atau ekspektasi yang bisa terjadi dalam kasus tersebut.
+Jalankan test, pasti akan menemukan kegagalan, tentu saja karena kita belum menulis kode implementasinya.
+
+- Tulis kode sesuai ekspektasi dari skrip pengujian / test, tujuannya agar bisa memenuhi skrip pengujian.
+
+- Jalankan ulang test, jika masih terdapat test yang gagal, maka perbaiki lagi kodenya hingga memenuhi semua skrip pengujian / test.
+
+- Jika merasa kode yang ditulis berantakan, kurang optimal, lakukan refactor. Jika test dijalankan kembali dan hasilnya tetap memenuhi test, maka tidak ada masalah dari hasil refactoring kita.
 
 #Feature Test
 test the whole apps features into one test case
