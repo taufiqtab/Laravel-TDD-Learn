@@ -54,6 +54,46 @@ This is easier said than done, right? How do you test something when it doesn’
 
 It’s going to feel a bit weird when you’re just starting out, but you’ll get used to it after writing a few dozen tests and going through the whole cycle.
 
+### Phase Test Function
+
+- Arrange
+mempersiapkan data / komponen yang dibutuhkan untuk pengujian, misal memasukan beberapa data sample / dummy, membuat object, dll
+
+```
+    Product::factory()->count(3)->create(); // create 3 products
+```
+
+- Act
+melakukan action yang ingin di uji
+
+```
+    $response = $this->get('/');
+```
+
+- Assert
+melakukan penegasan dan pemeriksaan dari output act sesuai skema test yang dibutuhkan
+
+```
+    $response->assertViewIs('search');
+```
+
+Full Code Example : 
+
+```
+/** @test */
+    public function food_search_page_has_all_the_required_page_data()
+    {
+        // Arrange
+        Product::factory()->count(3)->create();
+
+        // Act
+        $response = $this->get('/');
+
+        //Assert
+        $response->assertViewIs('search');
+    }
+```
+
 ## notes 
 ### Gamma Testing
 Setelah lolos Alpha & Beta Testing, keamanan dan fungsi, perbaikan hanya bug Critical, selebihnya di perbaiki setelah aplikasi Release
