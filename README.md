@@ -80,8 +80,8 @@ melakukan penegasan dan pemeriksaan dari output act sesuai skema test yang dibut
 
 Full Code Example : 
 ```
-/** @test */
-    public function food_search_page_has_all_the_required_page_data()
+    /** @test */
+    public function sebuah_contoh_percobaan()
     {
         // Arrange
         Product::factory()->count(3)->create();
@@ -92,7 +92,7 @@ Full Code Example :
 
         //Assert
         $response->assertViewIs('search');
-        
+
         $response->assertRedirect('/cart')
         ->assertSessionHasNoErrors()
         ->assertSessionHas('cart.0', [
@@ -171,6 +171,27 @@ class BismillahTest extends TestCase
         BismillahController::insertNewData();
         $result = BismillahModel::get();
         $this->assertCount(3, $result);
+    }
+
+    /** @test */
+    public function sebuah_contoh_percobaan()
+    {
+        // Arrange
+        Product::factory()->count(3)->create();
+
+        // Act
+        $response = $this->get('/'); // untuk method get
+        $response = $this->post('/cart', [ 'id' => 1]); //untuk method post
+
+        //Assert
+        $response->assertViewIs('search');
+
+        $response->assertRedirect('/cart')
+        ->assertSessionHasNoErrors()
+        ->assertSessionHas('cart.0', [
+            'id' => 1,
+            'qty' => 1,
+        ]);
     }
 }
 ```
