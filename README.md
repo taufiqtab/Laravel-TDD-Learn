@@ -36,16 +36,19 @@ php artisan test tests/Feature/BismillahTest.php
 ```
 
 ## Standart Assert Function
-- assertTrue()        = check if result true (bool)
-- assertFalse()       = check if result false (bool)
-- assertEquals()      = check if result equals to given value
-- assertNull()        = check if result null
-- assertContains()    = check if result contain some given value
-- assertCount()       = check if result data length is equal to given total
-- assertEmpty()       = check if result is empty
-- assertSee()         = check on rendered page if see/contain some given value
-- assertViewIs()      = check if rendered view is some view from given value
-- assertStatus()      = check if response status is equal to given value 
+- assertTrue()                  = check if result true (bool)
+- assertFalse()                 = check if result false (bool)
+- assertEquals()                = check if result equals to given value
+- assertNull()                  = check if result null
+- assertContains()              = check if result contain some given value
+- assertCount()                 = check if result data length is equal to given total
+- assertEmpty()                 = check if result is empty
+- assertSee()                   = check on rendered page if see/contain some given value
+- assertViewIs()                = check if rendered view is some view from given value
+- assertStatus()                = check if response status is equal to given value 
+- assertRedirect()              = Asserts that the server redirects to a specific endpoint once the form is submitted
+- assertSessionHasNoErrors()    = Asserts that the server didn’t return any errors via a flash session. This is typically used to verify that there are no form validation errors.
+- assertSessionHas()            = Asserts that the session has particular data in it. If it’s an array, you can use the index to refer to the specific index you want to check.
 
 ### FYI
 The first thing you need to keep in mind when starting a project using TDD is that you have to write the test code before the actual functionality that you need to implement.
@@ -83,7 +86,8 @@ Full Code Example :
         Product::factory()->count(3)->create();
 
         // Act
-        $response = $this->get('/');
+        $response = $this->get('/'); // untuk method get
+        $response = $this->post('/cart', [ 'id' => 1]); //untuk method post
 
         //Assert
         $response->assertViewIs('search');
