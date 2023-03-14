@@ -68,7 +68,8 @@ mempersiapkan data / komponen yang dibutuhkan untuk pengujian, misal memasukan b
 - Act :
 melakukan action yang ingin di uji
 ```
-    $response = $this->get('/');
+    $response = $this->get('/'); // untuk method get
+    $response = $this->post('/cart', [ 'id' => 1]); //untuk method post
 ```
 
 - Assert :
@@ -91,6 +92,13 @@ Full Code Example :
 
         //Assert
         $response->assertViewIs('search');
+        
+        $response->assertRedirect('/cart')
+        ->assertSessionHasNoErrors()
+        ->assertSessionHas('cart.0', [
+            'id' => 1,
+            'qty' => 1,
+        ]);
     }
 ```
 
