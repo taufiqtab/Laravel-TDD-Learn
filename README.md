@@ -56,29 +56,25 @@ It’s going to feel a bit weird when you’re just starting out, but you’ll g
 
 ### Phase Test Function
 
-- Arrange
+- Arrange :
 mempersiapkan data / komponen yang dibutuhkan untuk pengujian, misal memasukan beberapa data sample / dummy, membuat object, dll
-
 ```
     Product::factory()->count(3)->create(); // create 3 products
 ```
 
-- Act
+- Act :
 melakukan action yang ingin di uji
-
 ```
     $response = $this->get('/');
 ```
 
-- Assert
+- Assert :
 melakukan penegasan dan pemeriksaan dari output act sesuai skema test yang dibutuhkan
-
 ```
     $response->assertViewIs('search');
 ```
 
 Full Code Example : 
-
 ```
 /** @test */
     public function food_search_page_has_all_the_required_page_data()
